@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/planOfDayFragment"
+        android:title="Планы"
+        android:icon="@drawable/ic_baseline_add_circle_24"
+        />
+    <item
+        android:title="Питание"
+        android:icon="@drawable/ic_baseline_add_circle_24"
+        android:id="@+id/planOfEatFragment"/>
+    <item
+        android:title="Цели"
+        android:icon="@drawable/ic_baseline_add_circle_24"
+        android:id="@+id/purposeFragment"/>
+    <item
+        android:title="Заметки"
+        android:icon="@drawable/ic_baseline_add_circle_24"
+        android:id="@+id/noteFragment"/>
+    <item
+        android:title="Покупки"
+        android:icon="@drawable/ic_baseline_add_circle_24"
+        android:id="@+id/shopsFragment"/>
+
+</menu>

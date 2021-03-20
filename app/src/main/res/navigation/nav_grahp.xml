@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_grahp"
+    app:startDestination="@id/planOfDayFragment">
+
+    <fragment
+        android:id="@+id/addNoteFragment"
+        android:name="space.basyk.zametki.screens.addnotes.AddNoteFragment"
+        android:label="fragment_add_note"
+        tools:layout="@layout/fragment_add_note" >
+        <action
+            android:id="@+id/action_addNoteFragment_to_noteFragment"
+            app:destination="@id/noteFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/noteFragment"
+        android:name="space.basyk.zametki.screens.notes.NoteFragment"
+        android:label="fragment_note"
+        tools:layout="@layout/fragment_note" >
+        <action
+            android:id="@+id/action_noteFragment_to_addNoteFragment"
+            app:destination="@id/addNoteFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/planOfDayFragment"
+        android:name="space.basyk.zametki.screens.plansofday.PlanOfDayFragment"
+        android:label="fragment_plan_of_day"
+        tools:layout="@layout/fragment_plan_of_day" >
+        <action
+            android:id="@+id/action_planOfDayFragment_to_addOfDayFragment"
+            app:destination="@id/addOfDayFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/planOfEatFragment"
+        android:name="space.basyk.zametki.screens.plansofeat.PlanOfEatFragment"
+        android:label="fragment_plan_of_eat"
+        tools:layout="@layout/fragment_plan_of_eat" >
+        <action
+            android:id="@+id/action_planOfEatFragment_to_addOfFoodFragment"
+            app:destination="@id/addOfFoodFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/purposeFragment"
+        android:name="space.basyk.zametki.screens.purpose.PurposeFragment"
+        android:label="fragment_purpose"
+        tools:layout="@layout/fragment_purpose" >
+        <action
+            android:id="@+id/action_purposeFragment_to_addPurposeFragment"
+            app:destination="@id/addPurposeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/shopsFragment"
+        android:name="space.basyk.zametki.screens.shops.ShopsFragment"
+        android:label="fragment_shops"
+        tools:layout="@layout/fragment_shops" >
+        <action
+            android:id="@+id/action_shopsFragment_to_addShopFragment"
+            app:destination="@id/addShopFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addOfDayFragment"
+        android:name="space.basyk.zametki.screens.addofday.AddOfDayFragment"
+        android:label="fragment_add_of_day"
+        tools:layout="@layout/fragment_add_of_day" >
+        <action
+            android:id="@+id/action_addOfDayFragment_to_planOfDayFragment"
+            app:destination="@id/planOfDayFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addOfFoodFragment"
+        android:name="space.basyk.zametki.screens.addoffood.AddOfFoodFragment"
+        android:label="fragment_add_of_food"
+        tools:layout="@layout/fragment_add_of_food" >
+        <action
+            android:id="@+id/action_addOfFoodFragment_to_planOfEatFragment"
+            app:destination="@id/planOfEatFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addPurposeFragment"
+        android:name="space.basyk.zametki.screens.addpurpose.AddPurposeFragment"
+        android:label="fragment_add_purpose"
+        tools:layout="@layout/fragment_add_purpose" >
+        <action
+            android:id="@+id/action_addPurposeFragment_to_purposeFragment"
+            app:destination="@id/purposeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addShopFragment"
+        android:name="space.basyk.zametki.screens.addshop.AddShopFragment"
+        android:label="fragment_add_shop"
+        tools:layout="@layout/fragment_add_shop" >
+        <action
+            android:id="@+id/action_addShopFragment_to_shopsFragment"
+            app:destination="@id/shopsFragment" />
+    </fragment>
+</navigation>

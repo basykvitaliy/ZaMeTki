@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_start"
+    app:startDestination="@id/startFragment">
+
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="space.basyk.zametki.MainActivity"
+        android:label="activity_main"
+        tools:layout="@layout/activity_main" />
+
+    <fragment
+        android:id="@+id/startFragment"
+        android:name="space.basyk.zametki.screens.start.StartFragment"
+        android:label="fragment_test"
+        tools:layout="@layout/fragment_start" >
+        <action
+            android:id="@+id/action_testFragment_to_signInFragment"
+            app:destination="@id/signInFragment"
+            app:launchSingleTop="false" />
+        <action
+            android:id="@+id/action_testFragment_to_registrFragment"
+            app:destination="@id/registrFragment"
+            app:launchSingleTop="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/signInFragment"
+        android:name="space.basyk.zametki.screens.signin.SignInFragment"
+        android:label="fragment_sign_in"
+        tools:layout="@layout/fragment_sign_in" >
+        <action
+            android:id="@+id/action_signInFragment_to_mainActivity"
+            app:destination="@id/mainActivity"
+            app:launchSingleTop="false" />
+        <action
+            android:id="@+id/action_signInFragment_to_testFragment"
+            app:destination="@id/startFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/nav_start" />
+    </fragment>
+    <fragment
+        android:id="@+id/registrFragment"
+        android:name="space.basyk.zametki.screens.registration.RegistrFragment"
+        android:label="fragment_registr"
+        tools:layout="@layout/fragment_registr" >
+        <action
+            android:id="@+id/action_registrFragment_to_mainActivity"
+            app:destination="@id/mainActivity"
+            app:launchSingleTop="false" />
+        <action
+            android:id="@+id/action_registrFragment_to_testFragment"
+            app:destination="@id/startFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/nav_start" />
+    </fragment>
+</navigation>
